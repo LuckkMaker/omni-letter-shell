@@ -1,4 +1,4 @@
-# Copyright (c) 2024 MorroMaker
+# Copyright (c) 2024 LuckkMaker
 # All rights reserved.
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
@@ -12,6 +12,11 @@
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
+
+# Add the console configuration file
+set(CONSOLE_CFG_SOURCE_FILE ${CMAKE_CURRENT_LIST_DIR}/console_config.in)
+set(CONSOLE_CFG_TARGET_FILE ${OMNI_CONSOLE_CFG_DIR}/console_config.h)
+omni_add_configure_file(${CONSOLE_CFG_SOURCE_FILE} ${CONSOLE_CFG_TARGET_FILE})
 
 add_library(omni-letter-shell INTERFACE)
 
